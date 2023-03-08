@@ -2,6 +2,9 @@ import fs from "fs";
 import path from "path";
 import xmlenc from "xml-encryption";
 import { json2xml, xml2json } from "xml-js";
+import util from "util";
+
+// const writeFile = util.promisify(fs.writeFileSync);
 
 const characters = [
   {
@@ -46,15 +49,17 @@ const encrypt = function (data, options) {
         ignoreComment: true,
         spaces: 4,
       });
-      //save file
-      fs.writeFileSync(`${global.path.data}/za6.xml`, za6);
-      console.log(`-->> encrypt success!!!`);
-      resolve(result);
+
+      try {
+        writeFile(`${global.path.files}/encrypt-za6.xml`, za6);
+        console.log(`-->> encrypt success!!!`);
+        resolve(za6);
+      } catch (error) {
+        console.log(`-->> encrypt error: ${error}`);
+      }
     });
   });
 };
-
-
 
 const decrypt = function (data, options) {
   return new Promise(function (resolve, reject) {
@@ -63,15 +68,18 @@ const decrypt = function (data, options) {
         throw new Error(`error encrypted data: ${err}`);
       }
 
-      //save file
-      fs.writeFileSync(`${global.path.data}/decrtpy.xml`, result);
-      console.log(`-->> decrypt success!!!`);
-      resolve(result);
+      try {
+        writeFile(`${global.path.files}/decrypt-za6.xml`, result);
+        console.log(`-->> decrypt success!!!`);
+        resolve(result);
+      } catch (error) {
+        console.log(`-->> decrypt error: ${error}`);
+      }
     });
   });
 };
 
-const saveFile = function (name, data) {
+const writeFile = function (name, data) {
   fs.writeFileSync(name, data);
 };
 
