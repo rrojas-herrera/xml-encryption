@@ -1,0 +1,17 @@
+<ZONA_A6>
+    <EncryptedData Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns="http://www.w3.org/2001/04/xmlenc#">
+        <EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <EncryptedKey xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+                <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
+                <KeyInfo/>
+                <CipherData>
+                    <CipherValue>PEAHLfC1gDVPZ3MFiaOSq9AGQ6ByeZo3P66qzmCsZaXUGNBVB+VACMHr+EDj3PRh7ojtkWJ0n/Z8Uh9/3ZCbI8qCcsj5his3QlMoVtzO0el0A9ba8QC0kYFPWWjt9wCTi/YRLf2vu5ZwP+sufZYfoLIIlWN+QtbvfQ1T/qMD57LJagpxp1C6rkpIIpwxR7F0g5l/ogNvLW6Cpnto6Ltoo9+mh9yYdo4eYZM+wcBQ/qlRMlGljggfabhpIUJT9LmNEz7vAyzL1PTdjxQvIF363ILE7OKVmbQM/kdI7kx6ow7xvLoXPGMDWayPDiaKYEqTpK8UZpHZTdzt1PeO5A5arQ==</CipherValue>
+                </CipherData>
+            </EncryptedKey>
+        </KeyInfo>
+        <CipherData>
+            <CipherValue>qc7/sCx04EgZWwd86K8b8s5laV3opABTuU/T9+yoptTa5v/UryNwTjbmpm5QXWZpLNWLnphPFPK3YrP6NjjQ0Ilpw1jU5dnE4JXCPEW1kEggVW7pJszqZ8O0o4GaDlGOcwj/3SgfKDy5oJ3sZq3rRgazCOPlee1aVTaPUz5NpoIFfsFYLZKOGsFdkVRtZIjULCifMH3DhOhZi9x6B/8QXZFCCWC6t+tfum5HAbhsy57W6ticBXEThp4Ajc0UqXgrksdp6vlV48gav09wioYoNr7tKKKlTVBToga6S6cPEDnOktI0540NWkv4o6nEUd1c/x9fQzAudwhE1+EwBG3s8u08qb4vxh4E8peRWDP9WONgyP8=</CipherValue>
+        </CipherData>
+    </EncryptedData>
+</ZONA_A6>
